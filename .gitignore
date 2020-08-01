@@ -166,6 +166,10 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 
+# Build folders
+bin/
+obj/
+
 # Click-Once directory
 publish/
 
