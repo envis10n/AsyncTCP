@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Envis10n.AsyncTCP</PackageId>
-    <Version>0.0.2</Version>
+    <Version>0.0.4</Version>
     <Authors>envis10n</Authors>
     <Copyright>envis10n@envis10n.dev</Copyright>
     <RepositoryUrl>https://github.com/envis10n/AsyncTCP</RepositoryUrl>
@@ -13,6 +13,7 @@
     <Description>An event and Task based asynchronous TCP server and client library.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/envis10n/AsyncTCP</PackageProjectUrl>
+    <Product>Envis10n.AsyncTCP</Product>
   </PropertyGroup>
 
   <ItemGroup>

@@ -9,16 +9,15 @@ namespace AsyncTCP
     public class Client
     {
         public readonly Guid Id = Guid.NewGuid();
-        public event Action OnConnect;
         public event Action OnDisconnect;
         public event Action<byte[]> OnData;
         public event Action<SocketException> OnError;
         private TcpClient _client;
         public CancellationToken cancellation = CancellationToken.None;
         public Encoding DefaultEncoding = Encoding.UTF8;
-        public static Client Connect(string host, int port)
+        public Client(string host, int port) : this(new TcpClient())
         {
-            return new Client(new TcpClient(host, port));
+            _client.Connect(host, port);
         }
         public Client(TcpClient client)
         {
@@ -29,6 +28,7 @@ namespace AsyncTCP
 
             Task t = Task.Run(() =>
             {
+                while (!_client.Connected) { } // Wait until the client is actually connected
                 while (!cancellation.IsCancellationRequested && _client.Connected)
                 {
                     try
@@ -46,6 +46,7 @@ namespace AsyncTCP
                     }
                     catch (SocketException e)
                     {
+                        if (OnError == null) throw e;
                         InvokeOnError(e);
                         break;
                     }
@@ -53,7 +54,6 @@ namespace AsyncTCP
                 Close();
                 InvokeOnDisconnect();
             });
-            InvokeOnConnect();
         }
         public void Send(string data)
         {
@@ -70,12 +70,7 @@ namespace AsyncTCP
         public void Close()
         {
             _client.Close();
-        }
-        private void InvokeOnConnect()
-        {
-            if (OnConnect != null) OnConnect.Invoke();
-        }
-        private void InvokeOnDisconnect()
+        }        private void InvokeOnDisconnect()
         {
             if (OnDisconnect != null) OnDisconnect.Invoke();
         }
