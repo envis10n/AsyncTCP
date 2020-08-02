@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Envis10n.AsyncTCP</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>envis10n</Authors>
     <Copyright>envis10n@envis10n.dev</Copyright>
     <RepositoryUrl>https://github.com/envis10n/AsyncTCP</RepositoryUrl>
