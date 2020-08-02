@@ -1,7 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Envis10n.AsyncTCP</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>envis10n</Authors>
+    <Copyright>envis10n@envis10n.dev</Copyright>
+    <RepositoryUrl>https://github.com/envis10n/AsyncTCP</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>tcp,networking</PackageTags>
+    <Description>An event and Task based asynchronous TCP server and client library.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/envis10n/AsyncTCP</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
