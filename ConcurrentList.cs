@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AsyncTCP.Lib
+namespace Envis10n.AsyncTCP.Lib
 {
     class ConcurrentList<T> : AutoMutex<List<T>>
     {

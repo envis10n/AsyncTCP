@@ -4,7 +4,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AsyncTCP
+namespace Envis10n.AsyncTCP
 {
     using Lib;
     public class Server : IDisposable

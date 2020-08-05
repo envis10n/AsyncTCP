@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace AsyncTCP.Lib
+namespace Envis10n.AsyncTCP.Lib
 {
     class AutoMutexLock<T> : IDisposable
     {

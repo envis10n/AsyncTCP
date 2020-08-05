@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Sockets;
 
-namespace AsyncTCP
+namespace Envis10n.AsyncTCP
 {
     public class Client
     {
